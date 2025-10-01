@@ -1,0 +1,39 @@
+{
+  "mcpServers": {
+    "playwright": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "@playwright/mcp@next",
+        "--executable-path",
+        "/mnt/c/Program Files/Google/Chrome/Application/chrome.exe",
+        "--extension",
+        "--browser",
+        "chrome"
+      ]
+    },
+    "context7": {
+      "type": "http",
+      "url": "https://mcp.context7.com/mcp",
+      "headers": {
+        "CONTEXT7_API_KEY": "ctx7sk-906d6409-acca-4473-b187-269bbb282b49"
+      }
+    },
+    "console-ninja": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "-c",
+        "node ~/.console-ninja/mcp/"
+      ]
+    },
+    "nodejs-debugger": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "@hyperdrive-eng/mcp-nodejs-debugger"
+      ]
+    }
+  }
+}
