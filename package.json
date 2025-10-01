@@ -32,7 +32,12 @@
     "preopenapi-spec": "yarn run build",
     "openapi-spec": "node ./dist/openapi-spec",
     "prestart": "yarn run rebuild",
-    "start": "console-ninja node -r source-map-support/register .",
+    "start-build": "console-ninja node -r source-map-support/register .",
+    "start-dev": "console-ninja ts-node -r source-map-support/register src/index.ts",
+    "start-dev-transpileonly": "console-ninja ts-node --transpileOnly -r source-map-support/register src/index.ts",
+    "start:tsx": "console-ninja tsx src/index.ts",
+    "start-dev:watch": "nodemon --watch src --ext ts --exec console-ninja ts-node -r source-map-support/register src/index.ts",
+    "start:tsx:watch": "nodemon --watch src --ext ts --exec console-ninja tsx src/index.ts",
     "clean": "lb-clean dist *.tsbuildinfo .eslintcache",
     "rebuild": "yarn run clean && yarn run build"
   },
@@ -59,11 +64,14 @@
   },
   "devDependencies": {
     "@loopback/build": "^12.0.4",
-    "source-map-support": "^0.5.21",
+    "@loopback/eslint-config": "^16.0.1",
     "@loopback/testlab": "^8.0.4",
     "@types/node": "^16.18.126",
-    "@loopback/eslint-config": "^16.0.1",
     "eslint": "^8.57.1",
+    "nodemon": "^3.1.10",
+    "source-map-support": "^0.5.21",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.20.6",
     "typescript": "~5.2.2"
   }
 }

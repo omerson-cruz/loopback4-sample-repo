@@ -58,15 +58,15 @@ typings/
 .env
 
 # Transpiled JavaScript files from Typescript
-/dist
-dist/
+# /dist
+# dist/
 # Cache used by TypeScript's incremental build
 *.tsbuildinfo
 
 # Emacs auto-save file
 \#*#
 
-.claude/
-CLAUDE.md
+# .claude/
+# CLAUDE.md
 
 # test

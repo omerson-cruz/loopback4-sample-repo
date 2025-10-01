@@ -48,7 +48,7 @@ export class PingController {
 
     console.log('PingController.ping()');
 
-    console.log('sample', sample);
+    console.log('udpated test', sample);
 
     // Reply with a greeting, the current time, the url, and request headers
     return {
